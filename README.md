@@ -9,10 +9,7 @@ It will become more customized over time. You are welcome to use it, if you like
 - [Features](#features)
 - [Pre-installed Tools](#pre-installed-tools)
 - [Getting Started](#getting-started)
-- [Usage](#usage)
-- [Customizing the Image](#customizing-the-image)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Features
 
@@ -69,6 +66,16 @@ Clone the repository and build the Docker image locally:
 
 ```bash
 git clone https://github.com/lmoratti/moratti-kali.git
-cd your-repo
+cd moratti-kali
 docker build -t kali-cloud-tools .
+```
+
+
+### Running the image
+
+Start the container.
+```bash
+docker run -t -i moratti-kali
+```
+
 

@@ -64,10 +64,11 @@ To use this Docker container, you need to have Docker installed on your system. 
 
 Clone the repository and build the Docker image locally:
 
+I use podman but you should be able to get docker working by changing `podman` to `docker` below.
 ```bash
 git clone https://github.com/lmoratti/moratti-kali.git
 cd moratti-kali
-docker build -t kali-cloud-tools .
+podman build -t kali-cloud-tools .
 ```
 
 
@@ -75,7 +76,8 @@ docker build -t kali-cloud-tools .
 
 Start the container.
 ```bash
-docker run -t -i moratti-kali
+sudo podman network create -d bridge pentest
+podman run --tty --interactive --net=pentest --privileged moratti-kali
 ```
 
 

@@ -79,5 +79,7 @@ Start the container.
 sudo podman network create -d bridge pentest
 podman run --tty --interactive --net=pentest --privileged moratti-kali
 ```
-
-
+Add the startup to the alias "kali"
+```bash
+echo "alias kali='podman run --tty --interactive --net=pentest --privileged moratti-kali'" >> ~/.zshrc
+```
